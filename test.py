@@ -72,6 +72,8 @@ code_path = "codes/"
 
 #         if true_i >= 4:
 #             true_count += 1
+#         else:
+#             false_count += 1
 
 # print("accuarcy: %.0f%%" % (100 * true_count / (true_count + false_count)))
 
