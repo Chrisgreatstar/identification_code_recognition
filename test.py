@@ -1,12 +1,9 @@
-import tensorflow as tf
-import numpy as np
-import os
-from os import listdir
-from os.path import isfile, join
-import cv2
-
-
-
+# import tensorflow as tf
+# import numpy as np
+# import os
+# from os import listdir
+# from os.path import isfile, join
+# import cv2
 
 # whole test
 # code_path = "codes/"
