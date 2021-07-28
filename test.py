@@ -103,3 +103,23 @@ def recognize(img):
 
 img = cv2.imread(code_path + '0106.jpg')
 print(recognize(img))
+
+
+
+
+import random
+import urllib
+import numpy as np
+REQUEST_PREFIX = "https://agrygl.gdcic.net/v1/api/open/getvalidcode?key=examsigning&v="
+random_v = str(random.random())
+url = REQUEST_PREFIX + random_v
+
+
+
+req = urllib.request.urlopen(url)
+arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
+img = cv2.imdecode(arr, -1) # 'Load it as it is'
+
+cv2.imshow('image', img)
+print(recognize(img))
+cv2.waitKey(0)
