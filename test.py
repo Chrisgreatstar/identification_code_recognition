@@ -28,6 +28,7 @@ def cut_image(image):
         target_w_right = target_w[wi + 1]
         target_h_lower = target_h[0]
         target_h_upper = target_h[1]
+        # padding or reshape
         if len(image.shape) > 2:
             res.append(image[target_h_lower:target_h_upper, target_w_left:target_w_right, :])
         else:
