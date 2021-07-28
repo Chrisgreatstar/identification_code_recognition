@@ -102,8 +102,8 @@ def recognize(img):
     
     return res
 
-img = cv2.imread(code_path + '0106.jpg')
-print(recognize(img))
+# img = cv2.imread(code_path + '0106.jpg')
+# print(recognize(img))
 
 
 
