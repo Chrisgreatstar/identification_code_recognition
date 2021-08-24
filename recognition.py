@@ -2,6 +2,8 @@ import tensorflow as tf
 import numpy as np
 import cv2
 
+checkpoint_path = "saved_model/saved_checkpoint"
+
 class ID_MODEL(object):
     def __init__(self):
         self.model = tf.keras.models.Sequential([
@@ -12,7 +14,7 @@ class ID_MODEL(object):
         ])
 
         # 恢复权重
-        self.model.load_weights('saved_checkpoint')
+        self.model.load_weights(checkpoint_path)
 
     def cut_image(self, image):
         target_w = [3, 13, 21, 31, 40]
